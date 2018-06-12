@@ -102,16 +102,16 @@ html, body {
 }
 body {
     font-family:Lora;
-    font-size: 16px;
+    font-size: 18px;
     color: #101010;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.2px;
-    line-height: 20px;
+    line-height: 22px;
 }
 p {
-    line-height:28px;
-    font-size:16px;
+    line-height:30px;
+    font-size:18px;
     font-family:Lora;
     color: #949494;
 }
@@ -244,7 +244,7 @@ img {
 }
 .hearticon {
     font-size: 22px;
-    color: #e09d7c;
+    color: #ff5c5c;
     font-weight: bold;
     z-index: 10;
 }
@@ -257,7 +257,7 @@ img {
 }
 .hearticon-3 {
     left: -15px;
-    color: #e1b6a0;
+    color: #fdabab;
     font-weight: bold;
     top: 5px;
 }
@@ -285,19 +285,14 @@ img {
     animation-delay: 2s; 
 }
 .error {
-    color: #f23b43;
+    color: #ff5c5c;
     padding-top: 10px;
     font-size: 14px;
-    color: #f23b43;
-    padding-top: 10px;
-    font-weight: normal;
 }
 #comment-form label.error {
     color: #f23b43;
     padding-top: 10px;
     font-size: 14px;
-    color: #f23b43;
-    padding-top: 10px;
     font-weight: normal;
 }
 span.visible-xs {
@@ -704,8 +699,8 @@ img.logo-white-bg {
 #homeslider-wrap h1 {
     font-size: 45px;
     font-weight:400;
-    font-family: Josefin Slab,Arial,sans-serif;
-    text-transform: uppercase;
+    font-family: Great Vibes,Josefin Slab,Arial,sans-serif;
+    /* text-transform: uppercase; */
 }
 #homeslider-wrap p {
     color: #ffffff;
@@ -714,7 +709,10 @@ img.logo-white-bg {
     color: #ffffff;
 }
 #homeslider-wrap.v2 .logo-slider {
-    color: #ffd0bc;
+    color: #ff5c5c;
+}
+.red-flair {
+    color: #ff5c5c;
 }
 #homeslider-wrap h2 {
     font-size: 100px;
@@ -731,7 +729,7 @@ img.logo-white-bg {
     padding-top: 10px;
 }
 #homeslider-wrap .logo-slider {
-    color:  #ffd0bc; 
+    color:  #ff5c5c; 
 }
 @media (max-width: 767px) {
     #homeslider-wrap h1 {
@@ -1232,6 +1230,9 @@ img.logo-white-bg {
     padding-top: 20px;
 }
 @media (min-width: 769px) {
+    #wedding-info .container {
+        width: 1400px;
+    }
     #wedding-info .pading-text {
         padding-left: 40px;
         padding-right: 20px;
@@ -1585,28 +1586,35 @@ img.logo-white-bg {
     padding: 80px 0;
     background: rgba(242, 242, 242, 1);
 }
-#suscribe-box-onepage .reg-box h2 {
+#suscribe-box-onepage .reg-box h2,
+#suscribe-box2-onepage .reg-box h2 {
     font-size: 34px;
     color: #ffffff;
 }
-#suscribe-box-onepage .reg-box h3 {
+#suscribe-box-onepage .reg-box h3,
+#suscribe-box2-onepage .reg-box h3 {
     font-size: 20px;
     padding-bottom: 10px;
     color: #ffffff;
 }
-#suscribe-box-onepage .reg-box p {
+#suscribe-box-onepage .reg-box p,
+#suscribe-box2-onepage .reg-box p {
     color: #ffffff;
 }
-#suscribe-box-onepage .btn-medium-v2 {
+#suscribe-box-onepage .btn-medium-v2,
+#suscribe-box2-onepage .btn-medium-v2 {
     color: #ffffff;
 }
-#suscribe-box-onepage  .btn-medium-v2:hover {
+#suscribe-box-onepage  .btn-medium-v2:hover,
+#suscribe-box2-onepage  .btn-medium-v2:hover {
     border: 2px solid transparent;
 }
-#suscribe-box-onepage.v2.background-cover::before {
+#suscribe-box-onepage.v2.background-cover::before,
+#suscribe-box2-onepage.v2.background-cover::before {
     background-color: rgba(0, 0, 0, 0.2) !important;
 }
-#suscribe-box-onepage .reg-box {
+#suscribe-box-onepage .reg-box,
+#suscribe-box2-onepage .reg-box {
     padding: 150px 0;     
     text-align: center;   
 }
@@ -1686,12 +1694,12 @@ img.logo-white-bg {
     border-top: 1px solid #c0b079;
     margin-top: 10px;
 }
-#suscribe-box .reserve-subheadline {
-    padding-bottom: 20px;
-    padding-top: 20px;
+#suscribe-box-onepage .reg-box h2.reserve-subheadline,
+#suscribe-box2-onepage .reg-box h2.reserve-subheadline {
     font-family: Great Vibes;
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 45px;
+    font-weight: bold;
+    padding-bottom: 15px;
 }
 
 /* ----------------------------------------------- */
@@ -2317,6 +2325,9 @@ img.logo-white-bg {
 #gift-registry.onepage {
     padding: 80px 0 60px 0;   
 }
+#gift-registry p {
+    color: #FFF;
+}
 #gift-registry-image .section-wraper {
     color: #ffffff;
     padding-top: 350px;
@@ -2605,7 +2616,7 @@ img.logo-white-bg {
 }
 .blog-content .autors:hover {
     color: #ffffff;
-    background: #ffd0bc;
+    background: #ff5c5c;
 }
 
 /*  19.5. Blog Single Page
@@ -2665,10 +2676,11 @@ img.logo-white-bg {
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 500;
+    transition: background-color 2s ease;
 }
 #comment-form .btn-medium:hover {
     color:#FFF;
-    background: #e1b6a0;
+    background-color: #e1b6a0;
     border: 1px solid #c0b079;
 }
 #comment-form label {
@@ -2683,6 +2695,9 @@ img.logo-white-bg {
 }
 .form-control {
     padding: 12px 12px;
+}
+.form-control::placeholder {
+    color: #FFF;
 }
 #about-social-2 .social-network-square i {
     display: inline-block;
@@ -2751,7 +2766,6 @@ img.logo-white-bg {
 #reserve-image-background .about-section-wraper h2 {
     font-size: 100px;
     font-family: Great Vibes;
-    margin-top: -5px;
     color: #ffffff;
     font-weight: 400;
 }
@@ -2793,11 +2807,16 @@ img.logo-white-bg {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
+    -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+    -moz-transition: background-color 0.5s ease, color 0.5s ease;
+    -o-transition: background-color 0.5s ease, color 0.5s ease;
+    -ms-transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 #reserve-image-background .btn-medium:hover {
     color: #101010;
     text-decoration: none;
-    background: #fff;
+    background-color: #fff;
     font-weight: bold;
     border: 1px solid transparent;
 }
@@ -2915,8 +2934,7 @@ img.logo-white-bg {
 #reserve-image-background .form-control {
     color: #fff;
     background-color: transparent;
-    border: 1px solid transparent;
-    border-bottom: 1px solid #ffffff;
+    border: 1px solid #fff;
 }
 #reserve-image-background .form-control:focus {
     border-color: #ffffff;
@@ -2944,7 +2962,17 @@ img.logo-white-bg {
     color: #e1b6a0;
     background:#fff;
 }
-
+#entry-password {
+    padding-bottom: 50px;
+}
+#entry-password .password {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    text-align: center;
+}
 /* -------------------------------------------------- */ 
 /* 21. Social Icons
 /* -------------------------------------------------- */ 
@@ -3514,7 +3542,7 @@ footer {
     padding-bottom: 30px;
 }
 #footer .logo-slider {
-    color: #ffd0bc;
+    color: #ff5c5c;
 }
 #footer #with {
     font-size: 70px;
@@ -3600,7 +3628,7 @@ footer {
 #menu-header .menu-section-wraper h1 {
     font-size: 35px;
     font-weight: 400;
-    font-family: Josefin Slab,Arial,sans-serif;
+    font-family: Great Vibes,Josefin Slab,Arial,sans-serif;
     text-transform: uppercase;
     color: #101010;
 }

@@ -42,6 +42,26 @@
 
 Pace.on('done', function () {
     $('#preloader').hide();
+    $('#countdown').hide();
+    $('#wedding-header').hide();
+    $('#wedding-info').hide();
+    $('#suscribe-box-onepage').hide();
+    $('#suscribe-box2-onepage').hide();
+    $('#reserve-image-background').hide();
+    $('#footer').hide();
+});
+
+$('#entry-password .password').keyup(function() {
+    if($('#entry-password .password').val().toLowerCase() == 'mauricehenry'){
+        $(this).hide();
+        $('#countdown').show();
+        $('#wedding-header').show();
+        $('#wedding-info').show();
+        $('#suscribe-box-onepage').show();
+        $('#suscribe-box2-onepage').show();
+        $('#reserve-image-background').show();
+        $('#footer').show();
+    }
 });
 
 /* ----------------------------------------------- */
@@ -308,9 +328,9 @@ var navbar_transparent = $('.sticky-wrapper').waypoint(function (direction) {
 /* 10.3. Fixed Top Navbar - Waypoint+Sticky Plugins Custom
  ------------------------------------ */
 
-var sticky = new Waypoint.Sticky({
-    element: $('.navbar')[0]
-});
+// var sticky = new Waypoint.Sticky({
+//     element: $('.navbar')[0]
+// });
 
 /* ----------------------------------------------- */
 /* 11. Ajax Form Submit
@@ -318,20 +338,20 @@ var sticky = new Waypoint.Sticky({
 
 $("#block-main-form").validate({
     rules: {
-        name: "required",
-        subject: "required",
-        message: "required",
+        attendees: "required",
+        //dietary: "required",
+        //message: "required",
         email: {
             required: true,
             email: true
         }
     },
     messages: {
-        name: "Name Required",
-        subject: "Subject Required",
-        message: "Message Required",
+        attendees: "Please enter attendees",
+        //subject: "Subject Required",
+        //message: "Message Required",
         email: {
-            required: "Email Address Required",
+            required: "Please enter an email address",
             email: "Please enter a valid email address"
         }
     },
