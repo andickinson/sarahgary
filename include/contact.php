@@ -42,7 +42,7 @@ if (!isset($hasError)) {
     // Replace youremail@domain.com by your email;
     $subject = $subject;
     $to = 'andickinson@gmail.com';
-    $headers = 'From: andickinson@gmail.com' . "\r\n";
+    $headers = 'From: {{email}}' . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     // load email HTML template
@@ -53,7 +53,7 @@ if (!isset($hasError)) {
     $body = str_replace('{{dietary}}', $dietary, $body);
     $body = str_replace("\n.", "\n..", $body);
     mail($to, $subject, $body, $headers); //This method sends the email.
-    echo "<button id='submit' class='btn btn-medium btn-block'>Email was sent!</button>";
+    echo "<button id='submit' class='btn btn-medium btn-block' disabled>Email was sent!</button>";
 }
         
         
