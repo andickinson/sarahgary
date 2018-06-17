@@ -66,5 +66,8 @@ if (!isset($hasError)) {
     mail($to, $subject, $body, $headers); //This method sends the email.
     echo "<p class='form-submitted'><strong>RSVP sent!</strong></p>";
 }
+else {
+    echo "<p class='form-submitted'><strong>Uh oh! It looks like there has been an error, please call 0419 153 571 for assistance.</strong></p>";
+}
         
         
