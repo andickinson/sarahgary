@@ -40,7 +40,7 @@ if (trim($_POST['attendees']) == '') {
 if (!isset($hasError)) {
     // Now we have all the information from the fields sent by the form.
     // Replace youremail@domain.com by your email;
-    $subject = $subject;
+    $subject = 'Wedding RSVP';
     $to = 'andickinson@gmail.com';
     $headers = 'From: {{email}}' . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
@@ -53,7 +53,7 @@ if (!isset($hasError)) {
     $body = str_replace('{{dietary}}', $dietary, $body);
     $body = str_replace("\n.", "\n..", $body);
     mail($to, $subject, $body, $headers); //This method sends the email.
-    echo "<button id='submit' class='btn btn-medium btn-block' disabled>Email was sent!</button>";
+    echo "<h3>RSVP sent!</h3>";
 }
         
         
