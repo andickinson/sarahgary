@@ -41,8 +41,8 @@ if (!isset($hasError)) {
     // Now we have all the information from the fields sent by the form.
     // Replace youremail@domain.com by your email;
     $subject = 'Wedding RSVP';
-    $to = 'andickinson@gmail.com';
-    $headers = 'From: {{email}}' . "\r\n";
+    $to = 'sarahmc.chan@hotmail.com,garyrward@gmail.com,andickinson@gmail.com';
+    $headers = 'From: ' . $email . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     // load email HTML template
