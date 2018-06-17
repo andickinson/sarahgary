@@ -28,7 +28,7 @@ if (trim($_POST['attendees']) == '') {
     }
 }
 if (trim($_POST['dietary']) == '') {
-    $dietary = 'none';
+    $dietary = 'None';
 } else {
     if (function_exists('stripslashes')) {
         $dietary = stripslashes(trim($_POST['dietary']));
@@ -37,7 +37,7 @@ if (trim($_POST['dietary']) == '') {
     }
 }
 if (trim($_POST['attend']) == '') {
-    $attend = 'none';
+    $hasError = true;
 } else {
     if (function_exists('stripslashes')) {
         $attend = stripslashes(trim($_POST['attend']));
@@ -50,8 +50,8 @@ if (!isset($hasError)) {
     // Now we have all the information from the fields sent by the form.
     // Replace youremail@domain.com by your email;
     $subject = 'Wedding RSVP';
-    // $to = 'sarahmc.chan@hotmail.com, garyrward@gmail.com, andickinson@gmail.com';
-    $to = 'andickinson@gmail.com';
+    $to = 'sarahmc.chan@hotmail.com, garyrward@gmail.com, andickinson@gmail.com';
+    // $to = 'andickinson@gmail.com';
     $headers = 'From: ' . $email . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
@@ -64,7 +64,7 @@ if (!isset($hasError)) {
     $body = str_replace('{{dietary}}', $dietary, $body);
     $body = str_replace("\n.", "\n..", $body);
     mail($to, $subject, $body, $headers); //This method sends the email.
-    echo "<p class='form-submitted'><strong>Email sent!</strong></p>";
+    echo "<p class='form-submitted'><strong>RSVP sent!</strong></p>";
 }
         
         
