@@ -104,6 +104,8 @@ $(window).on('load', function () {
         animationLoop: true,
         pauseOnHover: true
     });
+
+    $('.password').focus();
 });
 
 /* ----------------------------------------------- */

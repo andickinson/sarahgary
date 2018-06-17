@@ -36,6 +36,15 @@ if (trim($_POST['dietary']) == '') {
         $dietary = trim($_POST['dietary']);
     }
 }
+if (trim($_POST['attend']) == '') {
+    $attend = 'none';
+} else {
+    if (function_exists('stripslashes')) {
+        $attend = stripslashes(trim($_POST['attend']));
+    } else {
+        $attend = trim($_POST['attend']);
+    }
+}
 //If there is no error then send the email
 if (!isset($hasError)) {
     // Now we have all the information from the fields sent by the form.
@@ -49,6 +58,7 @@ if (!isset($hasError)) {
     // load email HTML template
     $body = file_get_contents('../include/email-template.html');
     // replace appropriate placeholders
+    $body = str_replace('{{attend}}', $attend, $body);
     $body = str_replace('{{email}}', $email, $body);
     $body = str_replace('{{attendees}}', $attendees, $body);
     $body = str_replace('{{dietary}}', $dietary, $body);

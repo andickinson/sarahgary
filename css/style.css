@@ -2923,6 +2923,9 @@ img.logo-white-bg {
 #reserve-form .form-group {
     margin-bottom: 20px;
 }
+.form-group p {
+    color: #FFF;
+}
 .rsrv-section-wraper {
     margin-bottom: 50px;
 }
