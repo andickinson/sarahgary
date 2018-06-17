@@ -27,21 +27,22 @@ if (trim($_POST['attendees']) == '') {
         $attendees = trim($_POST['attendees']);
     }
 }
-// if (trim($_POST['dietary']) == '') {
-//     $hasError = true;
-// } else {
-//     if (function_exists('stripslashes')) {
-//         $dietary = stripslashes(trim($_POST['dietary']));
-//     } else {
-//         $dietary = trim($_POST['dietary']);
-//     }
-// }
+if (trim($_POST['dietary']) == '') {
+    $dietary = 'none';
+} else {
+    if (function_exists('stripslashes')) {
+        $dietary = stripslashes(trim($_POST['dietary']));
+    } else {
+        $dietary = trim($_POST['dietary']);
+    }
+}
 //If there is no error then send the email
 if (!isset($hasError)) {
     // Now we have all the information from the fields sent by the form.
     // Replace youremail@domain.com by your email;
     $subject = 'Wedding RSVP';
-    $to = 'sarahmc.chan@hotmail.com, garyrward@gmail.com, andickinson@gmail.com';
+    // $to = 'sarahmc.chan@hotmail.com, garyrward@gmail.com, andickinson@gmail.com';
+    $to = 'andickinson@gmail.com';
     $headers = 'From: ' . $email . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
