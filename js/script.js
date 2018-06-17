@@ -356,6 +356,7 @@ $("#block-main-form").validate({
         }
     },
     submitHandler: function (form) {
+        $('#submit').prop('disabled', true);
         $.ajax({
             type: "POST",
             url: "include/contact.php",
@@ -367,6 +368,7 @@ $("#block-main-form").validate({
                 setTimeout(function () {
                     $this.button('reset');
                 }, 4000);
+                $('#submit').prop('disabled', true);
             }
         });
         return false;

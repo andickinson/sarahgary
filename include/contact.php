@@ -40,9 +40,9 @@ if (trim($_POST['dietary']) == '') {
 if (!isset($hasError)) {
     // Now we have all the information from the fields sent by the form.
     // Replace youremail@domain.com by your email;
-    $subject = $subject;
-    $to = 'andickinson@gmail.com';
-    $headers = 'From: {{email}}' . "\r\n";
+    $subject = 'Wedding RSVP';
+    $to = 'sarahmc.chan@hotmail.com, garyrward@gmail.com, andickinson@gmail.com';
+    $headers = 'From: ' . $email . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     // load email HTML template
@@ -53,7 +53,7 @@ if (!isset($hasError)) {
     $body = str_replace('{{dietary}}', $dietary, $body);
     $body = str_replace("\n.", "\n..", $body);
     mail($to, $subject, $body, $headers); //This method sends the email.
-    echo "<button id='submit' class='btn btn-medium btn-block' disabled>Email was sent!</button>";
+    echo "<p class='form-submitted'><strong>Email sent!</strong></p>";
 }
         
         

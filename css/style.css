@@ -101,6 +101,7 @@ html, body {
     padding: 0;
 }
 body {
+    background-image: url(../images/norwegian_rose.png);
     font-family:Lora;
     font-size: 18px;
     color: #101010;
@@ -120,6 +121,18 @@ h1, h2, h3, h4, h5 {
 }
 .no-padding {
     padding: 0;
+}
+section,
+footer,
+.shadow-wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+}
+.shadow-wrapper {
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.75);
 }
 .btn, a, a.expand {
     cursor: pointer;
@@ -666,7 +679,7 @@ img.logo-white-bg {
 ------------------------------------ */ 
 
 #homeslider-wrap {
-    margin:0; 
+    margin:0 auto; 
     padding:0;
     position:relative;
 }
@@ -768,7 +781,6 @@ img.logo-white-bg {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-position:50% 50%;
     background-color:#FFF;
     -webkit-transform: translateZ(0);
 }
@@ -1041,6 +1053,7 @@ img.logo-white-bg {
     } 
 }
 #wedding-header.wedding-header-single-page {
+    background-color: #FFF;
     padding: 80px 0 10px 0;
 }
 @media (max-width: 767px) {
@@ -1231,7 +1244,7 @@ img.logo-white-bg {
 }
 @media (min-width: 769px) {
     #wedding-info .container {
-        width: 1400px;
+        width: auto;
     }
     #wedding-info .pading-text {
         padding-left: 40px;
@@ -2697,6 +2710,9 @@ img.logo-white-bg {
     padding: 12px 12px;
 }
 .form-control::placeholder {
+    color: #FFF;
+}
+.form-submitted {
     color: #FFF;
 }
 #about-social-2 .social-network-square i {
