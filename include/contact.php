@@ -27,15 +27,15 @@ if (trim($_POST['attendees']) == '') {
         $attendees = trim($_POST['attendees']);
     }
 }
-if (trim($_POST['dietary']) == '') {
-    $hasError = true;
-} else {
-    if (function_exists('stripslashes')) {
-        $dietary = stripslashes(trim($_POST['dietary']));
-    } else {
-        $dietary = trim($_POST['dietary']);
-    }
-}
+// if (trim($_POST['dietary']) == '') {
+//     $hasError = true;
+// } else {
+//     if (function_exists('stripslashes')) {
+//         $dietary = stripslashes(trim($_POST['dietary']));
+//     } else {
+//         $dietary = trim($_POST['dietary']);
+//     }
+// }
 //If there is no error then send the email
 if (!isset($hasError)) {
     // Now we have all the information from the fields sent by the form.
